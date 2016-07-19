@@ -1,3 +1,3 @@
-# TinyXML
+# tinyxml
 
-TinyXML with CMake
+tinyxml with CMake

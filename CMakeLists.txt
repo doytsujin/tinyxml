@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 2.8)
 
 # Project name
-project(TinyXML)
+project(tinyxml)
 
 set(INSTALL_BIN_DIR "${CMAKE_INSTALL_PREFIX}/bin" CACHE PATH "Installation directory for executables")
 set(INSTALL_LIB_DIR "${CMAKE_INSTALL_PREFIX}/lib" CACHE PATH "Installation directory for libraries")
@@ -29,7 +29,7 @@ if(APPLE)
 endif()
 
 set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -stdlib=libc++ -fno-rtti -g -Wall")
-add_library(TinyXML STATIC ${TINYXML_SRCS} ${TINYXML_HDRS})
+add_library(${PROJECT_NAME} STATIC ${TINYXML_SRCS} ${TINYXML_HDRS})
 
 if(NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL)
     install(TARGETS ${PROJECT_NAME}
