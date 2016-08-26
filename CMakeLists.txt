@@ -28,7 +28,6 @@ if(APPLE)
     set(CMAKE_MACOSX_RPATH 1)
 endif()
 
-set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -stdlib=libc++ -fno-rtti -g -Wall")
 add_library(${PROJECT_NAME} STATIC ${TINYXML_SRCS} ${TINYXML_HDRS})
 
 if(NOT SKIP_INSTALL_LIBRARIES AND NOT SKIP_INSTALL_ALL)
